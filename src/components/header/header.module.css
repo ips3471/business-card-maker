@@ -1,0 +1,22 @@
+@value makerGreen from '../../common/color.module.css';
+
+.header {
+    position: relative;
+    background-color: makerGreen;
+    text-align: center;
+    display: inline-block;
+    width: 30rem;
+}
+
+.header_logo {
+    width: 2.5rem;
+}
+.btn_logout {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+}
+
+h1 {
+    margin: 0;
+}

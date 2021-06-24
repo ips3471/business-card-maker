@@ -1,0 +1,36 @@
+@value makerBlack, makerGreen, makerWhite from '../../common/color.module.css';
+.container {
+    background-color: makerWhite;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.title_login {
+    color: makerBlack;
+}
+.btn_login {
+    outline: none;
+    border: 2px solid makerGreen;
+    border-radius: 1rem;
+    display: inline-block;
+    width: 29rem;
+    height: 2rem;
+    margin: .1rem;
+    background-color: transparent;
+    color: makerBlack;
+    cursor: pointer;
+}
+.btn_login:hover {
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30rem;
+    height: 20rem;
+    margin: auto;
+}

@@ -1,0 +1,10 @@
+@value makerGrey from './common/color.module.css';
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: makerGrey;
+}
