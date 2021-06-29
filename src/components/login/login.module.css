@@ -1,4 +1,4 @@
-@value makerBlack, makerGreen, makerWhite from '../../common/color.module.css';
+@value makerBlack, makerGreen, makerWhite, makerLightPink from '../../common/color.module.css';
 .container {
     background-color: makerWhite;
 }
@@ -23,6 +23,7 @@ ul {
     cursor: pointer;
 }
 .btn_login:hover {
+    background-color: makerLightPink;
 }
 
 .container {
