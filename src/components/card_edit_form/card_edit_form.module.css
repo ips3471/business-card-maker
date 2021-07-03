@@ -1,0 +1,29 @@
+@value makerPink, makerGreen, makerBlack from '../../common/color.module.css';
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    border-top: 1px solid makerBlack;
+    border-left: 1px solid makerBlack;
+    /* margin-top: 1rem; */
+    margin: 0.5rem 1rem;
+
+}
+.input,
+.select,
+.button,
+.textarea {
+    flex: 1 1 30%;
+    border: 0;
+    border-right: 1px solid makerBlack;
+    border-bottom: 1px solid makerBlack;
+    height: 2rem;
+}
+
+.button {
+    flex: 1 0;
+}
+.textarea {
+    min-width: 100%;
+}

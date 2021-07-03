@@ -1,0 +1,14 @@
+@value makerGreen, makerWhite from '../../common/color.module.css';
+
+
+.button{
+    border: none;
+    background-color: makerGreen;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid makerGreen;
+    color: makerWhite;
+    font-size: 0.7rem;
+    cursor: pointer;
+
+}

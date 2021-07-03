@@ -1,0 +1,14 @@
+@value makerPink, makerGreen from '../../common/color.module.css';
+
+
+.fileInput {
+    border: none;
+    background-color: makerPink;
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid makerPink;
+    color: makerGreen;
+    font-size: 0.7rem;
+    cursor: pointer;
+
+}

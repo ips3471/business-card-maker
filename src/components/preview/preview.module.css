@@ -1,7 +1,6 @@
 @value makerGreen from '../../common/color.module.css';
 
 .preview {
-    background-color: orange;
     flex-basis: 50%;
 }
 

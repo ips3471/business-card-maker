@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: darkseagreen;
+    border-radius: 1rem;
+    display: flex;
+    flex: 1 1 30%;
+    margin: 0.5rem 1rem;
+    padding: 2.5rem 1.5rem;
+    height: 12rem;
+    align-items: center;
+    
+}
+.profileImg {
+    display: flex;
+    flex: 0.5;
+}
+.photo {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px dotted black;
+    margin-right: 1.5rem;
+}
+.profileTitle {
+    border-bottom: 1px solid black;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+.profileText {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+
+}
+.name {
+    
+}
+.company {
+    
+
+}
+.position {
+    display: block;
+}
+.email {
+    display: block;
+}
+.comment {
+    display: block;
+    /* padding-top: .3rem; */
+    font-size: 1.1rem;
+}
+
+

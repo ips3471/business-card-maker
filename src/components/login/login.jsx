@@ -25,9 +25,7 @@ const Login = ({authService}) => {
         });
     })
 
-    const onLogout = () => {
 
-    }
 
     return (
         <section className={styles.container}>
