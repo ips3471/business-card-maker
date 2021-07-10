@@ -1,4 +1,4 @@
-@value makerPink, makerLightGrey, makerGreen, makerBlack from '../../common/color.module.css';
+@value makerPink, makerGreen, makerBlack from '../../common/color.module.css';
 
 .form {
     display: flex;
@@ -13,7 +13,6 @@
 .input,
 .select,
 .button,
-.btn_upload,
 .textarea {
     flex: 1 1 30%;
     border: 0;
@@ -22,18 +21,9 @@
     height: 2rem;
 }
 
-.input,
-.select,
-.textarea {
-    padding-left: .5rem;
-}
-
 .button {
     flex: 1 0;
 }
-
-
-
 .textarea {
     min-width: 100%;
 }

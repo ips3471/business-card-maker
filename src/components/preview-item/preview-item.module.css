@@ -1,3 +1,5 @@
+@value makerWhite, makerLightPink, makerWheat, makerGreen, makerGrey, makerBlack, makerColorful from '../../common/color.module.css';
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,7 +7,7 @@
 }
 
 .container {
-    background-color: darkseagreen;
+    background-color: makerWhite;
     border-radius: 1rem;
     display: flex;
     flex: 1 1 30%;
@@ -20,9 +22,8 @@
     flex: 0.5;
 }
 .photo {
-    width: 100%;
+    width: 9rem;
     border-radius: 50%;
-    border: 1px dotted black;
     margin-right: 1.5rem;
 }
 .profileTitle {
@@ -57,3 +58,14 @@
 }
 
 
+.dark{
+    background-color: makerGrey;
+}
+.light {
+    background-color: makerWheat;
+
+}
+.colorful {
+    background-color: makerLightPink;
+
+}

@@ -7,10 +7,10 @@ const Preview = ({profiles}) => (
         <h1 className={styles.title}>Card Preview</h1>
             <ul>
             {
-                profiles.map(profile =>                     
+                Object.keys(profiles).map(key =>                     
                 <PreviewItem 
-                    key={profile.id} 
-                    profile={profile}
+                    key={key} 
+                    profile={profiles[key]}
                     />
                 )
             }        
