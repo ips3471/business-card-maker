@@ -3,7 +3,7 @@ import Button from '../button/button';
 import styles from './card_add_form.module.css';
 
 const CardAddForm = ({onAdd, Imageinput}) => {
-    const nameRef = useRef();
+const nameRef = useRef();
 const companyRef = useRef();
 const positionRef = useRef();
 const emailRef = useRef();
@@ -13,7 +13,6 @@ const themeRef = useRef();
 const [file, setFile] = useState({fileName: null, fileURL: null});
 
 const onFileChange = file => {
-    console.log(file);
     setFile({
         fileName: file.fileName,
         fileURL: file.fileURL,
@@ -21,6 +20,10 @@ const onFileChange = file => {
 }
 const onAddClick = (event) => {
 event.preventDefault();
+if(!nameRef.current.value) {
+    alert('insert your name');
+    return;
+}
 const profile = {
 id: Date.now(),
 name: nameRef.current.value,
@@ -48,7 +51,8 @@ onAdd(profile);
             className={styles.input} 
             type="text" 
             name="name"
-            placeholder="name" />
+            placeholder="name"
+            required />
             <input 
             ref={companyRef} 
             className={styles.input} 

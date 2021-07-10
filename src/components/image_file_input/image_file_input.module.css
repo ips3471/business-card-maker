@@ -1,8 +1,16 @@
-@value makerPink, makerLightGrey, makerGreen, makerBlack from '../../common/color.module.css';
+@value makerPink, makerLightGrey, makerLightPink ,makerGreen, makerBlack from '../../common/color.module.css';
 
 
 .input {
     display: none;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: makerLightGrey;
 }
 
 .button {
@@ -13,6 +21,31 @@
     cursor: pointer;
     color: makerGreen;
 }
+.noUpload {
+    background-color: makerLightGrey;
+}
+.uploaded {
+    background-color: makerLightPink;
+}
 .button:hover {
     opacity: 0.8;
+}
+
+.loading {
+    box-sizing: border-box;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 3px solid makerGreen;
+    border-top: makerPink;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
