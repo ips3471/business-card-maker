@@ -15,6 +15,8 @@ const Maker = ({authService, ImageInput, cardRepository}) => {
     const history = useHistory();
     const onLogout = () => {
         authService.logout();
+        cardRepository.syncOff(userId);
+        console.log('cardRepository.syncOff: 데이터베이스 동기화 종료');
     }
     
     useEffect(() => { 
@@ -27,7 +29,6 @@ const Maker = ({authService, ImageInput, cardRepository}) => {
         cardRepository.cardSync(userId, profiles => {
             setProfiles(profiles);
         });
-        // return () => handleSync();
         }, [userId, cardRepository]);
 
     useEffect(() => {

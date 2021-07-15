@@ -47,10 +47,7 @@
 .file,
 .delete {
     flex: 1 0;
+    padding: 0;
     height: buttonHeight;
 }
 
-.delete {
-    padding: 0;
-    
-}

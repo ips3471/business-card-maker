@@ -42,6 +42,7 @@ const CardEditForm = ({profile, deleteCard, updateProfile, ImageInput}) => {
             className={styles.input}
             type="text" 
             name="name" 
+            placeholder="name" 
             ref={nameRef} 
             value={name} 
             onChange={onContentChange} 
@@ -50,6 +51,7 @@ const CardEditForm = ({profile, deleteCard, updateProfile, ImageInput}) => {
             className={styles.input}
             type="text" 
             name="company" 
+            placeholder="company" 
             ref={companyRef} 
             value={company} 
             onChange={onContentChange} />
@@ -67,6 +69,7 @@ const CardEditForm = ({profile, deleteCard, updateProfile, ImageInput}) => {
             className={styles.input}
             type="text" 
             name="position" 
+            placeholder="position" 
             ref={positionRef} 
             value={position} 
             onChange={onContentChange} />
@@ -74,6 +77,7 @@ const CardEditForm = ({profile, deleteCard, updateProfile, ImageInput}) => {
             className={styles.input}
             type="text" 
             name="email" 
+            placeholder="email" 
             ref={emailRef} 
             value={email} 
             onChange={onContentChange} />
@@ -81,6 +85,7 @@ const CardEditForm = ({profile, deleteCard, updateProfile, ImageInput}) => {
             className={styles.textarea}
             ref={commentRef} 
             name="comment" 
+            placeholder="comment" 
             value={comment} 
             onChange={onContentChange} 
             />
