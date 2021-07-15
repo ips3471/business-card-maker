@@ -1,7 +1,9 @@
-@value makerGreen from '../../common/color.module.css';
+@value makerGreen, makerLightGrey from '../../common/color.module.css';
 
 .editor {
-    /* flex-basis: 50%; */
+    flex-basis: 50%;
+    border-right: 1px solid makerLightGrey;
+    overflow-y: auto;
 }
 
 .title {

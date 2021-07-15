@@ -1,4 +1,5 @@
 @value makerPink, makerGreen, makerBlack from '../../common/color.module.css';
+@value buttonHeight from '../../common/size.module.css';
 
 .form {
     display: flex;
@@ -6,24 +7,45 @@
     /* width: 100%; */
     border-top: 1px solid makerBlack;
     border-left: 1px solid makerBlack;
+    margin: 1rem;
     /* margin-top: 1rem; */
-    margin: 0.5rem 1rem;
+    /* margin-bottom: 1rem; */
+    /* margin: 0.5rem 1rem; */
 
 }
 .input,
 .select,
 .button,
 .textarea {
-    flex: 1 1 30%;
+    font-size: 0.8rem;
+    width: 100%;
     border: 0;
+    padding: 0.5rem;
     border-right: 1px solid makerBlack;
     border-bottom: 1px solid makerBlack;
-    height: 2rem;
+    background-color: makerWhite;
+}
+
+.input,
+.select {
+    flex: 1 1 30%;
 }
 
 .button {
     flex: 1 0;
+    height: buttonHeight;
+    padding: 0;
 }
+
+
+
+.input:focus,
+.select:focus,
+.button:focus,
+.textarea:focus {
+    outline: 0;
+}
+
 .textarea {
-    min-width: 100%;
+    flex-basis: 100%;
 }

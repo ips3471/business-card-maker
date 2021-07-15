@@ -5,18 +5,14 @@ import PreviewItem from '../preview-item/preview-item';
 const Preview = ({profiles}) => (
     <section className={styles.preview}>
         <h1 className={styles.title}>Card Preview</h1>
-            <ul>
-            {
-                Object.keys(profiles).map(key =>                     
+        <ul className={styles.profiles}>
+            {Object.keys(profiles).map(key => (
                 <PreviewItem 
-                    key={key} 
-                    profile={profiles[key]}
-                    />
-                )
-            }        
-            </ul>
-
-
+                key={key} 
+                profile={profiles[key]}
+                />
+            ))}        
+        </ul>
     </section>
 );
 

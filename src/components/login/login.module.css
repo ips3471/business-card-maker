@@ -1,37 +1,38 @@
 @value makerBlack, makerGreen, makerWhite, makerLightPink from '../../common/color.module.css';
-.container {
+.login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 30rem;
     background-color: makerWhite;
 }
-ul {
+.list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 0.5rem;
+
 }
-.title_login {
+.title {
     color: makerBlack;
 }
-.btn_login {
+.button {    
     outline: none;
     border: 2px solid makerGreen;
     border-radius: 1rem;
-    display: inline-block;
-    width: 29rem;
-    height: 2rem;
-    margin: .1rem;
+    width: 100%;
+    height: 2.5rem;
+    font-size: 1.2rem;
     background-color: transparent;
-    color: makerBlack;
     cursor: pointer;
+    margin: .1rem;
 }
-.btn_login:hover {
+.button:hover {
     background-color: makerLightPink;
 }
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 30rem;
-    height: 20rem;
-    margin: auto;
+.footer {
+    height: 3rem;
 }
+

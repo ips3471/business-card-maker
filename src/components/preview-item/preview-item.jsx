@@ -4,23 +4,17 @@ import carrot from './carrot.png';
 
 const DEFAULT_IMAGE = carrot;
 const PreviewItem = ({profile}) => {
-    const url = profile.fileURL || DEFAULT_IMAGE;
-    const {name, company, position, email, comment, theme} = profile;
-    return(
+    const {name, company, position, email, comment, theme, fileURL} = profile;
+    const url = fileURL || DEFAULT_IMAGE;
+    return (
         <li className={`${styles.container} ${getStyles(theme)}`}>
-            <div className={styles.profileImg}>
-                <img className={styles.photo} src={url} alt="profile"></img>
-            </div>
-            <div className={styles.profileText}>
-                <div className={styles.profileTitle}>
+            <img className={styles.photo} src={url} alt="profile"></img>
+            <div className={styles.info}>
                     <h2 className={styles.name}>{name}</h2>
-                    <span className={styles.company}>{company}</span>
-                </div>
-                <div className={styles.profileDesc}>
-                    <span className={styles.position}>{position}</span>
-                    <span className={styles.email}>{email}</span>
-                    <span className={styles.comment}>"{comment}"</span>
-                </div>
+                    <p className={styles.company}>{company}</p>
+                    <p className={styles.position}>{position}</p>
+                    <p className={styles.email}>{email}</p>
+                    <p className={styles.comment}>"{comment}"</p>
             </div>
         </li>
     )
@@ -35,7 +29,8 @@ function getStyles(theme) {
         case 'colorful':
             return styles.colorful;
         default: 
-            throw new Error(`unknown theme: ${theme}`);
+            return styles.light;
+            // throw new Error(`unknown theme: ${theme}`);
     }
 }
 

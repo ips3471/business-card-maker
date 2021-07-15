@@ -11,7 +11,7 @@ const Login = ({authService}) => {
             pathname: '/maker',
             state: { id: userId},
         });
-    }
+    };
 
     const onLogin = event => {
         authService
@@ -25,16 +25,22 @@ const Login = ({authService}) => {
         });
     })
 
-
-
     return (
-        <section className={styles.container}>
+        <section className={styles.login}>
             <Header />
-            <h1 className={styles.title_login}>Login</h1>
-            <ul>
-                <li><button className={styles.btn_login} onClick={onLogin}>Google</button></li>
-                <li><button className={styles.btn_login} onClick={onLogin}>Github</button></li>
-            </ul>
+            <section>
+                <h1 className={styles.title}>Login</h1>
+                <ul className={styles.list}>
+                    <li className={styles.item}>
+                        <button className={styles.button} onClick={onLogin}>Google
+                        </button>
+                    </li>
+                    <li className={styles.item}>
+                        <button className={styles.button} onClick={onLogin}>Github
+                        </button>
+                    </li>
+                </ul>
+            </section>
             <Footer />
         </section>
     )

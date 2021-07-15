@@ -2,41 +2,29 @@
 @value mediaQuery from '../../common/size.module.css';
 
 .maker {
+    width: 100%;
+    height: 100%;
+    max-width: 67rem;
     display: flex;
     flex-direction: column;
-    flex-basis: 100%;
-    height: 100vh;
-    max-width: 67rem;
-}
-
-
-.body {
-    display: flex;
     background-color: makerWhite;
+    
 }
 
-.editor {
-    width: 50%;
-
+.container {
+    display: flex;
+    flex: 1;
+    min-height: 0;
 }
 
-.preview {
-    width: 50%;
 
-}
 
 
 
 
 
 @media screen and (max-width: mediaQuery) {
-    .body {
+    .container {
         flex-direction: column;
-    }
-    .editor {
-        width: 100%;
-    }
-    .preview {
-        width: 100%;
     }
 }

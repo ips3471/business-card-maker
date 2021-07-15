@@ -1,71 +1,66 @@
-@value makerWhite, makerLightPink, makerWheat, makerGreen, makerGrey, makerBlack, makerColorful from '../../common/color.module.css';
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@value makerWhite, makerShadow, makerLightPink, makerWheat, makerGreen, makerGrey, makerBlack, makerColorful from '../../common/color.module.css';
 
 .container {
-    background-color: makerWhite;
-    border-radius: 1rem;
     display: flex;
-    flex: 1 1 30%;
-    margin: 0.5rem 1rem;
-    padding: 2.5rem 1.5rem;
-    height: 12rem;
     align-items: center;
-    
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0;
+    box-shadow: 6px 6px 8px 0px makerShadow;
+    max-width: 30rem;
+    /* background-color: grey; */
 }
-.profileImg {
-    display: flex;
-    flex: 0.5;
-}
+
+
 .photo {
     width: 9rem;
+    height: 9rem;
+    padding: 1rem;
+    margin: 0 1rem 0 0.5rem;
     border-radius: 50%;
-    margin-right: 1.5rem;
 }
-.profileTitle {
-    border-bottom: 1px solid black;
-    padding-bottom: .5rem;
-    margin-bottom: .5rem;
-}
-.profileText {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
 
+.info {
+    width: 100%;
 }
-.name {
-    
-}
-.company {
-    
 
-}
-.position {
-    display: block;
-}
-.email {
-    display: block;
-}
+.name,
+.company,
+.position,
+.email,
 .comment {
-    display: block;
-    /* padding-top: .3rem; */
-    font-size: 1.1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
 }
 
+.name {
+    font-size: 1.2rem;;
+}
+
+.company {
+    margin-bottom: 1rem;
+}
+
+.company:after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: makerWheat;
+    transform: translateY(0.3rem);
+}
 
 .dark{
-    background-color: makerGrey;
+    background-color: makerBlack;
+    color: makerWhite;
 }
-.light {
-    background-color: makerWheat;
 
+.light {
+    background-color: makerWhite;
+    color: makerBlack;
+    border: 1px solid makerWheat;
 }
 .colorful {
-    background-color: makerLightPink;
-
+    background: makerColorful;
 }

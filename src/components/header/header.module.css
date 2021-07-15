@@ -1,10 +1,21 @@
 @value makerGreen, makerWhite, makerBlack from '../../common/color.module.css';
 
 .header {
-    position: relative;
-    background-color: makerGreen;
+    box-sizing: border-box;
+    width: 100%;
     text-align: center;
-    display: inline-block;
+    padding: 0.5rem;
+    background-color: makerGreen;
+    position: relative;
+}
+
+.header_logo {
+    width: 3rem;
+}
+
+.title {
+    margin: 0;
+    color: makerWhite;
 }
 
 .header_logo {
@@ -21,11 +32,10 @@
     border-radius: 10%;
     padding: .2rem;
 }
+
 .btn_logout:hover {
     background-color: makerWhite;
     color: makerBlack;
 }
 
-h1 {
-    margin: 0;
-}
+

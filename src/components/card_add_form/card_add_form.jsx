@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Button from '../button/button';
 import styles from './card_add_form.module.css';
 
-const CardAddForm = ({onAdd, Imageinput}) => {
+const CardAddForm = ({updateProfile, ImageInput}) => {
 const nameRef = useRef();
 const companyRef = useRef();
 const positionRef = useRef();
@@ -16,8 +16,9 @@ const onFileChange = file => {
     setFile({
         fileName: file.fileName,
         fileURL: file.fileURL,
-    })
-}
+    });
+};
+
 const onAddClick = (event) => {
 event.preventDefault();
 if(!nameRef.current.value) {
@@ -25,23 +26,23 @@ if(!nameRef.current.value) {
     return;
 }
 const profile = {
-id: Date.now(),
-name: nameRef.current.value,
-company: companyRef.current.value,
-position: positionRef.current.value,
-email: emailRef.current.value,
-comment: commentRef.current.value,
-theme: themeRef.current.value,
-fileName: file.fileName,
-fileURL: file.fileURL,
+    id: Date.now(),
+    name: nameRef.current.value,
+    company: companyRef.current.value || '',
+    position: positionRef.current.value || '',
+    email: emailRef.current.value || '',
+    comment: commentRef.current.value || '',
+    theme: themeRef.current.value || '',
+    fileName: file.fileName || null,
+    fileURL: file.fileURL || null,
 }
 formRef.current.reset();
+updateProfile(profile);
 setFile({
     fileName: null,
     fileURL: null,
 })
-onAdd(profile);
-}
+};
     return (
         <form
         className={styles.form}
@@ -60,11 +61,12 @@ onAdd(profile);
             name="company"
             placeholder="company" />
             <select 
-            ref={themeRef} 
-            className={styles.select}>
-                <option value="dark">Dark</option>
-                <option value="light">Light</option>
-                <option value="colorful">Colorful</option>
+            ref={themeRef}
+            className={styles.select}
+            defaultValue="Light">
+                <option placeholder="Dark">Dark</option>
+                <option placeholder="Light">Light</option>
+                <option placeholder="Colorful">Colorful</option>
             </select>
             <input 
             ref={positionRef} 
@@ -82,11 +84,10 @@ onAdd(profile);
             ref={commentRef} 
             className={styles.textarea} 
             name="comment"
-            placeholder="comment">
-            </textarea>
-            <div 
-            className={styles.button}>
-                <Imageinput onFileChange={onFileChange} name={file.fileName} />
+            placeholder="comment"
+            />
+            <div className={styles.button}>
+                <ImageInput onFileChange={onFileChange} name={file.fileName} />
             </div>
             <div 
             className={styles.button}>
