@@ -39,7 +39,7 @@ const Maker = ({authService, ImageInput, cardRepository}) => {
             if(user) {
                 setUserId(user.uid);
             } else {
-                history.push('/');
+                history.push('/business-card-maker/');
             }
         });
     }, [authService, userId, history]);
