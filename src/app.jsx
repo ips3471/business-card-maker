@@ -13,7 +13,7 @@ function App({authService, ImageInput, cardRepository}) {
           <Route exact path='/'>
             <Login authService = {authService}/>
           </Route>
-          <Route path='/maker'>
+          <Route path='/card-maker'>
             <Maker 
             authService={authService} 
             ImageInput={ImageInput} 
