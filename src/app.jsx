@@ -10,10 +10,10 @@ function App({authService, ImageInput, cardRepository}) {
     <div className={styles.app}>
       <BrowserRouter>
         <Switch>
-          <Route exact path='./business-card-maker/'>
+          <Route exact path='./card-maker/'>
             <Login authService = {authService}/>
           </Route>
-          <Route path='./card-maker'>
+          <Route path='./maker'>
             <Maker 
             authService={authService} 
             ImageInput={ImageInput} 
