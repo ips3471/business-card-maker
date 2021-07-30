@@ -1,20 +1,21 @@
 @value makerGreen from '../../common/color.module.css';
 
 .preview {
-    flex-basis: 50%;
-    overflow-y: auto;
+	flex-basis: 50%;
+	overflow-y: auto;
 }
 
 .title {
-    width: 100%;
-    text-align: center;
-    color: makerGreen;
+	width: 100%;
+	text-align: center;
+	color: makerGreen;
 }
 
 .profiles {
-    /* width: 100%; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0.5rem 1rem;
+	/* width: 100%; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0.5rem 1rem;
+	padding: 0;
 }
