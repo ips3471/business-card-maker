@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Footer from '../footer/footer';
@@ -11,27 +11,22 @@ const Maker = ({authService, ImageInput, cardRepository}) => {
     const historyState = useHistory().location.state;
     const [ profiles, setProfiles ] = useState({});
     const [ userId, setUserId ] = useState(historyState && historyState.id);
-
     const history = useHistory();
-    const onLogout = () => {
+    const onLogout = useCallback(() => {
         authService.logout();
-    }
+    }, [authService]);
     
     useEffect(() => { 
         if (!userId) {
-        console.log('no userId');
         cardRepository.syncOff(userId);
         return;
         }
-        console.log('on userId');
         cardRepository.cardSync(userId, profiles => {
             setProfiles(profiles);
         });
         return () => {
             cardRepository.syncOff(userId);
-            console.log('stopSync');
         }
-
         }, [userId, cardRepository]);
 
     useEffect(() => {
@@ -39,7 +34,7 @@ const Maker = ({authService, ImageInput, cardRepository}) => {
             if(user) {
                 setUserId(user.uid);
             } else {
-                history.push('./card-maker/');
+                history.push('/card-maker');
             }
         });
     }, [authService, userId, history]);

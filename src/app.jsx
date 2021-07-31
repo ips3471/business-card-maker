@@ -6,14 +6,13 @@ import Maker from './components/maker/maker';
 
 function App({authService, ImageInput, cardRepository}) {
   return (
-    <div className={styles.wrapper}>
     <div className={styles.app}>
       <BrowserRouter>
         <Switch>
-          <Route exact path='./card-maker/'>
+          <Route exact path='/card-maker'>
             <Login authService = {authService}/>
           </Route>
-          <Route path='./maker'>
+          <Route path='/maker'>
             <Maker 
             authService={authService} 
             ImageInput={ImageInput} 
@@ -22,11 +21,8 @@ function App({authService, ImageInput, cardRepository}) {
           </Route>
         </Switch>
       </BrowserRouter>
-
-    </div>
     </div>
   ) 
-  
 }
 
 export default App;
