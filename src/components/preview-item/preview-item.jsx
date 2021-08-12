@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './preview-item.module.css';
-import carrot from './carrot.png';
+import carrot from '../../common/carrot.png';
 
 const DEFAULT_IMAGE = carrot;
 const PreviewItem = ({profile}) => {
@@ -22,11 +22,11 @@ const PreviewItem = ({profile}) => {
 
 function getStyles(theme) {
     switch (theme) {
-        case 'dark':
+        case 'Dark':
             return styles.dark;
-        case 'light':
+        case 'Light':
             return styles.light;
-        case 'colorful':
+        case 'Colorful':
             return styles.colorful;
         default: 
             return styles.light;
