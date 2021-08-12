@@ -36,6 +36,7 @@ const profile = {
     fileName: file.fileName || null,
     fileURL: file.fileURL || null,
 }
+console.log(profile.theme);
 formRef.current.reset();
 updateProfile(profile);
 setFile({

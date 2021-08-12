@@ -1,28 +1,26 @@
-@value makerWhite, makerShadow, makerLightPink, makerWheat, makerGreen, makerGrey, makerBlack, makerColorful from '../../common/color.module.css';
+@value makerShadowWhite, makerShadowBlack, makerWhite, makerShadow, makerLightPink, makerWheat, makerGreen, makerGrey, makerBlack, makerColorful from '../../common/color.module.css';
 
 .container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-radius: 1rem;
-    margin-bottom: 0.5rem;
-    padding: 0.2rem 0;
-    box-shadow: 6px 6px 8px 0px makerShadow;
-    max-width: 30rem;
-    /* background-color: grey; */
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-radius: 1rem;
+	margin-bottom: 0.5rem;
+	padding: 0.2rem 0;
+	box-shadow: 6px 6px 8px 0px makerShadow;
+	max-width: 30rem;
 }
 
-
 .photo {
-    width: 9rem;
-    height: 9rem;
-    padding: 1rem;
-    margin: 0 1rem 0 0.5rem;
-    border-radius: 50%;
+	width: 9rem;
+	height: 9rem;
+	padding: 1rem;
+	margin: 0 1rem 0 0.5rem;
+	border-radius: 50%;
 }
 
 .info {
-    width: 100%;
+	width: 100%;
 }
 
 .name,
@@ -30,37 +28,36 @@
 .position,
 .email,
 .comment {
-    font-size: 0.8rem;
-    margin-bottom: 0.2rem;
+	font-size: 0.8rem;
+	margin-bottom: 0.2rem;
 }
 
 .name {
-    font-size: 1.2rem;;
+	font-size: 1.2rem;
 }
 
 .company {
-    margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .company:after {
-    content: '';
-    display: block;
-    width: 90%;
-    height: 1px;
-    background-color: makerWheat;
-    transform: translateY(0.3rem);
+	content: '';
+	display: block;
+	width: 90%;
+	height: 1px;
+	background-color: makerWheat;
+	transform: translateY(0.3rem);
 }
 
-.dark{
-    background-color: makerBlack;
-    color: makerWhite;
+.dark {
+	background: makerShadowBlack;
+	color: makerWhite;
 }
 
 .light {
-    background-color: makerWhite;
-    color: makerBlack;
-    border: 1px solid makerWheat;
+	background: makerShadowWhite;
+	color: makerBlack;
 }
 .colorful {
-    background: makerColorful;
+	background: makerColorful;
 }

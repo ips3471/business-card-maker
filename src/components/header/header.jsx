@@ -1,5 +1,5 @@
 import styles from './header.module.css';
-import logo from './carrot.png';
+import logo from '../../common/carrot.png';
 
 const Header = ({onLogout}) => (
     <header className={styles.header}>
