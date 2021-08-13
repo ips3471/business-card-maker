@@ -22,15 +22,14 @@ const PreviewItem = ({profile}) => {
 
 function getStyles(theme) {
     switch (theme) {
-        case 'Dark':
+        case 'dark':
             return styles.dark;
-        case 'Light':
+        case 'light':
             return styles.light;
-        case 'Colorful':
+        case 'colorful':
             return styles.colorful;
         default: 
             return styles.light;
-            // throw new Error(`unknown theme: ${theme}`);
     }
 }
 

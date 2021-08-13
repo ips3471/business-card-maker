@@ -43,7 +43,6 @@ const Maker = ({authService, ImageInput, cardRepository}) => {
         setProfiles(profiles => {
             const updated = {...profiles};
             updated[profile.id] = profile;
-            console.log(updated);
             return updated;
         });
         cardRepository.saveCard(userId, profile);
